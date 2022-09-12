@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--Very-Light-Gray);
+}
+
+main {
+  width: 80%;
+  margin: 50px 0;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+header h1 {
+  font-weight: 200;
+  color: var(--Very-Dark-Blue);
+}
+
+header h2 {
+  font-weight: 600;
+  font-size: 32px;
+  color: var(--Very-Dark-Blue);
+}
+
+header p {
+  font-size: 15px;
+  width: 520px;
+  margin: 20px auto;
+  color: var(--Grayish-Blue);
+}
+section {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+article {
+  background-color: #fff;
+  padding: 30px;
+  width: 370px;
+  box-shadow: 6px 6px 10px 2px #ccc;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+article:hover {
+  box-shadow: 10px 10px 10px 2px #ccc;
+}
+article::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 5px;
+  top: 0;
+  left: 50%;
+  transition: 0.5s;
+  transform: translateX(-50%);
+}
+
+article:hover::before {
+  width: 100%;
+}
+.supervisor::before {
+  background-color: var(--Cyan);
+}
+
+.team-builder::before {
+  background-color: var(--Red);
+}
+.karma::before {
+  background-color: var(--Orange);
+}
+.calculator::before {
+  background-color: var(--Blue);
+}
+article h3 {
+  font-weight: 600;
+  color: var(--Very-Dark-Blue);
+}
+article p {
+  color: var(--Grayish-Blue);
+  margin: 20px 0 40px;
+  font-size: 15px;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.icon {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 1200px) {
+  header h1,
+  header h2 {
+    font-size: 24px;
+  }
+  header p {
+    width: 300px;
+  }
+  section {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 375px) {
+  main {
+    width: 90%;
+  }
+  header h1,
+  header h2 {
+    font-size: 24px;
+  }
+  header p {
+    width: 300px;
+  }
+  section {
+    flex-direction: column;
+  }
+  article {
+    padding: 20px;
+    width: 100%;
+  }
+}
