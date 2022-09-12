@@ -50,7 +50,7 @@ header p {
   margin: 20px auto;
   color: var(--Grayish-Blue);
 }
-section {
+box1 {
   display: flex;
   gap: 30px;
   align-items: center;
@@ -106,7 +106,7 @@ article p {
   font-size: 15px;
 }
 
-.team {
+.box2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -126,7 +126,7 @@ article p {
   header p {
     width: 300px;
   }
-  section {
+  box1 {
     flex-direction: column;
   }
 }
@@ -142,7 +142,7 @@ article p {
   header p {
     width: 300px;
   }
-  section {
+  box1 {
     flex-direction: column;
   }
   article {
